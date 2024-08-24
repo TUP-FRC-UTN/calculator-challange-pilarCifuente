@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculadora</title>
+  <link rel="stylesheet" href="vista.component.css">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h2>Calculadora</h2>
+    </div>
+    <div>
+      <p>Valor 1</p>
+      <input type="number" [(ngModel)]="valor1" placeholder="ingrese el primer valor.."
+      >
+    </div>
+    <div>
+      <p>Valor 2</p>
+      <input type="number" [(ngModel)]="valor2" placeholder="ingrese el segundo valor..">
+    </div>
+    <div>
+      <p>Resultado</p>
+      <input type="number" [value]="resultado" disabled>
+    </div>
+    <div class="btn">
+      <button class="btnArriba" (click)="onCalcular('+')">+</button>
+      <button class="btnArriba" (click)="onCalcular('-')">-</button>
+      <button class="btnArriba" (click)="onCalcular('^')">^</button>
+    </div>
+    <div class="btn">
+      <button class="btnAbajo" (click)="onCalcular('*')">*</button>
+      <button class="btnAbajo" (click)="onCalcular('/')">/</button>
+      <button class="btnAbajo" (click)="onCalcular('CE')">CE</button>
+    </div>
+  </div>
+</body>
+
+</html>
